@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-8">
+      <div class="form-group mt-5 ml-2">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="search text goes here">
+      </div>
+    </div>
+
+
+    <!--  after clicking user details displaying div element -->
+    <div class="col-md-9 col-8 mt-3">
+      <div *ngIf="selectedUser" class="details ">
+        <h6>You selected: {{selectedUser.login}}.</h6>
+       <ul class="row_details">
+         <li> <b>login:</b> {{selectedUser.login}}</li>
+         <li> <b>id:</b> {{selectedUser.id}}</li>
+         <li> <b>avatar url:</b> {{selectedUser.avatar_url}}</li>
+         <li> <b>node id:</b> {{selectedUser.node_id}}</li>
+         <li> <b>repo url:</b> {{selectedUser.repos_url}}</li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="example_div">
+
+
+ 
+  
+<!-- user list and search filter option -->
+  <ul class="lis-view">
+    <li class="list-item" *ngFor="let user of isUsers | filter:term " [class.selected]="user === selectedUser"
+      (click)="onSelect(user)"> {{ user.login}}</li>
+
+  </ul>
+
+
+
+
+</div>

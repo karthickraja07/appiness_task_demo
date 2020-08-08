@@ -1,0 +1,29 @@
+.lis-view{
+    padding-left: 0;
+    padding: 20px;
+}
+
+
+.row_details{
+    padding-left: 0;
+    background: rgba(0, 123, 255, 0.25);
+    padding: 10px;
+}
+.list-item{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 11px;
+    margin: 4px;
+    width: 13.6%;
+    text-align: center;
+    background: #cec7c7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.row_details li{
+    display: inline-block;
+    margin-right: 15px;
+    
+
+}
